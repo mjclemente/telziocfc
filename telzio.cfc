@@ -73,7 +73,7 @@ component displayname="telziocfc"  {
     * @docs https://developer.telzio.com/reference#send-sms
     * @hint Send SMS from your Telzio phone number.
     */
-    public struct function sendSMS( required string from, required string to ) {
+    public struct function sendSMS( required string from, required string to, required string message ) {
       var payload = arguments;
       return apiCall( 'POST', '/sms/send', {}, payload );
     }
